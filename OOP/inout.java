@@ -83,8 +83,7 @@ public class inout {
          */
 
         ///System.out.println(args.length);  //javac inout.java, java inout.java args list... er length debe
-        
-        
+
         /*
          * 
          * 
@@ -111,7 +110,6 @@ public class inout {
          * 
          */
 
-         
         /*
          * 
          StringBuffer str1 = new StringBuffer("open");
@@ -123,8 +121,6 @@ public class inout {
          * 
          */
 
-
-
         /*
          * 
          int y = 08; //
@@ -135,9 +131,23 @@ public class inout {
          * 
          */
 
+        /*
+         * 
+         int i = 0;
+         int j = i;
+         j = i++ + j;     
+         System.out.println(i+" - "+j); //1 - 0 
+         */
 
+        String a = "";
+        while (a.length() != 2) 
+            a += "a";
+        System.out.println(a);  //aa
+        
 
     }
+                        //  @@@@@@@@@@@@@@@@@@@@ after main @@@@@@@@@@@@@@@@@
+    
     /*
      * The problem is that in Java, we cannot have static local variables. The alternative is to use static class members.
     
