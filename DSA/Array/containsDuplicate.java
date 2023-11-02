@@ -13,7 +13,7 @@ public class containsDuplicate {
                 map.put(nums[i], i);
             else {
                 int j = map.get(nums[i]);
-                if ( i != j && Math.abs(i - j) <= k) {
+                if ( i != j && MathEx.abs(i - j) <= k) {
                     return true;
                 }
             }

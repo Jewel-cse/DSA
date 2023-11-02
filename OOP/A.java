@@ -1,4 +1,5 @@
-public class A {
+public class A  {
+    
     //A B Main  there are three class. see main
     static int i = 1000;
     static {
@@ -8,6 +9,8 @@ public class A {
     {
 
         i = i++ + ++i;
-        System.out.println("Second: "+i);
+        System.out.println("Second: " + i);
     }
+    
+    
 }

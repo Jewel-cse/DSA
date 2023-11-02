@@ -9,5 +9,6 @@ public class longestSubarrayWithKsum {
         int left = 0;
         int right = len - 1;
         
+        return left;
     }
 }

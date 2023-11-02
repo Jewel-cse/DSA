@@ -1,4 +1,3 @@
-package Strivers;
 
 public class Stock_BuySell {
     public static void main(String[] args) {

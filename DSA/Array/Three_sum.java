@@ -1,4 +1,3 @@
-package Strivers;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -64,7 +63,7 @@ public class Three_sum {
             int k = n - 1;
             while (j < k) {
                 int sum = nums[i] + nums[j] + nums[k];
-                if (Math.abs(target - sum) < Math.abs(target - closestSum)) {
+                if (MathEx.abs(target - sum) < MathEx.abs(target - closestSum)) {
                     closestSum = sum;
                 }
 

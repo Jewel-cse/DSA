@@ -1,25 +1,23 @@
-import java.util.Stack;
 
 public class rmove_adjacent_duplicate {
     public static void main(String[] args) {
     
-        String str = "leet**cod*e";
-        System.out.println((str));
+        String str = "leet**cod*e";    //leecoe
+        System.out.println(removeDuplicates(str));
     }
-    //method
-    public String removeDuplicates(String s) {
-
-        Stack st = new Stack<Character>();
-        int len = s.length();
-        st.push(s.charAt(0));
-        for (int i = 1; i < len; i++) {
-            if (s.charAt(i) != ) {
-                st.push(s.charAt(i));
+    //method last theke asbo * > cnt++ na paile --, cnt == 0 string a add korbo
+    public  static String removeDuplicates(String s) {
+        StringBuilder sb = new StringBuilder();
+        int n = s.length();
+        
+        for (int i = 0; i <n; i++) {
+            if(s.charAt(i) != '*'){
+                sb.append(s.charAt(i));
             }
-            else {
-                st.pop();
-            }
+            else
+                sb.deleteCharAt(sb.length()-1);
         }
+        return sb.toString();
     }
         
 }

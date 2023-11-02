@@ -1,5 +1,4 @@
-package Strivers;
-
+package LinkedList;
 import java.util.Arrays;
 
 public class mergeTwosortlist {

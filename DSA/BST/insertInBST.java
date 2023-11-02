@@ -1,12 +1,20 @@
 package BST;
 
-import BinaryTree.TreeNode;
-
 public class insertInBST {
-    public static void main(String[] args) {
+   
 
+
+    public static void main(String[] args) {
+        TreeNode root = new TreeNode();
+        for (int i = 5; i >=0; i--) {
+            root = insertIntoBST(root, i * 3);
+        }
+
+        
     }
-    public TreeNode insertIntoBST(TreeNode root, int val) {
+    
+    //insert in bst from random integer.....................
+    public static TreeNode insertIntoBST(TreeNode root, int val) {
         if(root == null){
             return new TreeNode(val);
         }

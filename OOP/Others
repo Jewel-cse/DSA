@@ -1,0 +1,21 @@
+################
+Hash map >
+    :not syncronized- not suitable for threaded aplications
+    :null key 1 ta, value more than 1
+
+
+HashTable:
+    : syncronized , suitable for threaded aplications
+    :Not allow null key
+
+
+#############
+Importance of reflection.?????                           X
+############
+throw vs throws                                          X
+
+
+#############
+thread usage: 
+    = extending thread class 
+    = Implements runnable interface

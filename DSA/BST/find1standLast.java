@@ -1,7 +1,5 @@
 package BST;
 
-import java.util.Arrays;
-import java.util.List;
 
 public class find1standLast {
     public static void main(String[] args) {
@@ -34,6 +32,7 @@ public class find1standLast {
              }
  
         }
-        return [left,right];
+        return new int[] { left, right };
+        //return [left,right];
      }
 }

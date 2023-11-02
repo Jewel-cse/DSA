@@ -1,5 +1,3 @@
-package Strivers;
-
 
 public class rotate_90_Matrix {
     public static void main(String[] args) {

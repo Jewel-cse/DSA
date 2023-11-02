@@ -1,7 +1,6 @@
 package BST;
 
 import BinaryTree.TreeNode;
-import Strivers.reverseWordinString;
 
 public class checkBST {
     public static boolean isValidBST(TreeNode root) {

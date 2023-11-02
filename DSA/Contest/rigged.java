@@ -13,12 +13,12 @@ public class rigged {
 
         Scanner in = new Scanner(System.in);
         int t = in.nextInt();
-        
+
         while (t > 0) {
             int n = in.nextInt();
             for (int i = 0; i < n; i++) {
                 a[i] = in.nextInt();
-                
+
             }
             for (int i = 0; i < n; i++) {
 
@@ -29,8 +29,7 @@ public class rigged {
                 continue;
             }
             //calculate max of b
-        
-            
+
             for (int i = 1; i < b.length; i++) {
                 if (b[i] > a[0]) {
                     map.put(a[i], b[i]);
@@ -38,12 +37,10 @@ public class rigged {
             }
             //
             int max = Collections.max(map.keySet());
-           
-            
-            if (a[0] >= max+1) {
-                System.out.println(max+1);
-            }
-            else {
+
+            if (a[0] >= max + 1) {
+                System.out.println(max + 1);
+            } else {
                 System.out.println(-1);
             }
             //System.out.println(a[index]);
@@ -51,4 +48,4 @@ public class rigged {
             t--;
         }
     }
-
+}

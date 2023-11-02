@@ -1,4 +1,3 @@
-package Strivers;
 
 public class subArraySum {
     public static void main(String[] args) {

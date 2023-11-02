@@ -1,4 +1,3 @@
-package Strivers;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -1,5 +1,3 @@
-package Strivers;
-
 
 public class nextParmutation {
     public static void main(String[] args) {
