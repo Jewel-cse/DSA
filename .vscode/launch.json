@@ -6,6 +6,90 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ninjaTraining2D",
+            "request": "launch",
+            "mainClass": "DP.ninjaTraining2D",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "houseRobber",
+            "request": "launch",
+            "mainClass": "DP.houseRobber",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "maximumSumofNonAdj",
+            "request": "launch",
+            "mainClass": "DP.maximumSumofNonAdj",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "frogJumpWithKdistance",
+            "request": "launch",
+            "mainClass": "DP.frogJumpWithKdistance",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "frogJump",
+            "request": "launch",
+            "mainClass": "DP.frogJump",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "climbingStairs",
+            "request": "launch",
+            "mainClass": "DP.climbingStairs",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "fibonacci",
+            "request": "launch",
+            "mainClass": "DP.fibonacci",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "reverseKpartition",
+            "request": "launch",
+            "mainClass": "String.reverseKpartition",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "designer",
+            "request": "launch",
+            "mainClass": "inheritance.designer",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "Programer",
+            "request": "launch",
+            "mainClass": "inheritance.Programer",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "LettercCombination",
+            "request": "launch",
+            "mainClass": "Recursion.LettercCombination",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "SubsequenceGivenSumCount",
+            "request": "launch",
+            "mainClass": "Recursion.SubsequenceGivenSumCount",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
             "name": "reverseVowel",
             "request": "launch",
             "mainClass": "String.reverseVowel",
