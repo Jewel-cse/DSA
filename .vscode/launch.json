@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CustomSort",
+            "request": "launch",
+            "mainClass": "Another.CustomSort",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "clection",
+            "request": "launch",
+            "mainClass": "Another.clection",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "validParenthesis",
+            "request": "launch",
+            "mainClass": "DP.validParenthesis",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "subSetSumEqK",
+            "request": "launch",
+            "mainClass": "DP.subSetSumEqK",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "FirstMissingPositive",
+            "request": "launch",
+            "mainClass": "FirstMissingPositive",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
             "name": "ninjaTraining2D",
             "request": "launch",
             "mainClass": "DP.ninjaTraining2D",

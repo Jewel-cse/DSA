@@ -1,4 +1,3 @@
-package LastTime;
 
 public class findDuplicate {
 
