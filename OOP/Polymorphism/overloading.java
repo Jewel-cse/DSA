@@ -10,9 +10,8 @@ public class overloading {
      * @@@@@@ choto container e boro jinis  > explicit
      * Method hiding: static(parent) - static(child) :  compile time polymorphism/ @@@@@@ not override
      */
-
-     /*
-      * 
+/* 
+     
       //case 1:  
       public void methodOne(int i){
           System.out.println("int-arg method");
@@ -21,12 +20,13 @@ public class overloading {
       public void methodOne(float f) { //overloaded methods{
           System.out.println("float-arg method");
       }
-      overloading t=new overloading();
-      t.methodOne('a');//int-arg method
-      t.methodOne(10l);//float-arg method
-      //t.methodOne(10.5);//C.E:cannot find symbol  #############
-      */
-
+         overloading t=new overloading();
+        t.methodOne('a');//int-arg method
+        t.methodOne(10l);//float-arg method
+        //t.methodOne(10.5);//C.E:cannot find symbol  #############
+        t.methodOne('a');  // atomatic promotion
+      
+ */
 
 
     /*
@@ -94,10 +94,39 @@ public class overloading {
      */
     
     
+   /*  
+   void m1(String s) {
+      System.out.println("String");
+   }
+   
+   void m1(StringBuffer s) {
+      System.out.println("StringBuffer ");
+   }
+   void m1(Object s) {
+      System.out.println("Object ");
+   }
+   
+   public static void main(String[] args){
+      overloading o = new overloading();
+      o.m1("jewel");
+      o.m1(new StringBuffer("rana"));
+      o.m1(null);          //ambiguous for string and stringBuffer both are child class of object
+   
+   } */
     
+   /* 
+   
+   
+   void m1(int i) {  // for only one int arguments its @@@@ high priority.
+   System.out.println("integer");
+   }
+   void m1(int ... i) {     //accept 0/1/2/3....infinite argument . list priority pabe.....
+   System.out.println("integer argument...");
+   }
+   void m1(String i) {
+   System.out.println("String");
+   }
+   */
 
-    public static void main(String[] args){
     
-    
-    }
 }

@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "MainCasting",
+            "request": "launch",
+            "mainClass": "MainCasting",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "overloading",
+            "request": "launch",
+            "mainClass": "Polymorphism.overloading",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
             "name": "CustomSort",
             "request": "launch",
             "mainClass": "Another.CustomSort",

@@ -1,7 +1,11 @@
 package Polymorphism;
 
-public class overriding {
+import java.io.EOFException;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InterruptedIOException;
 
+public class overriding {
 
     /*in Runtime polymorphism : method resulation is dicide by jvm based on @@@@@@@@ runtime object
     //@@@@@@@@@@@@@@  Override kokhon hoy na?
@@ -15,8 +19,6 @@ public class overriding {
      * >variable overrride hoi na: just reference type onujaii call hoi...
      * 
      */
-
-
 
     /*
      * 
@@ -45,7 +47,7 @@ public class overriding {
          p1.marry();//Trisha/nayanatara/anushka(child metho }
      }
      */
-    
+
     /*
      * 
      class Parent {
@@ -64,23 +66,48 @@ public class overriding {
         public static void main(String[] args) {
         Parent p=new Parent();
         p.methodOne();//parent class
- 
+    
         Child c=new Child();
         c.methodOne();//child class
- 
+    
         Parent p1=new Child();
         p1.methodOne();//parent class // both parent and child method are static: so override hoi ni ,method hiding hoyese
         //method override na hole reference type onujaiiii function call hobe.
- 
+    
         // if both are @@@@@@@@ non static : then ouput
         Parent p1=new Child();
         p1.methodOne();  // child class hoto 
          
     }
+    }
+    */
+
 }
-*/
+
+class p {
+    public static Number m1() {
+        return null;
+    }
+
+}
+//Covarient return type
+class c extends p {
+    public static Integer m1() {
+        return 7;
+    }
+
+}
 
 
-
-
+class x  {
+    public  double m1() throws IOException{
+        return 8;
+    }
+}
+//Covarient return type
+class  y extends x {
+    public double m1() throws EOFException,FileNotFoundException,InterruptedIOException,NullPointerException{
+        return 0;
+    }
+    
 }
