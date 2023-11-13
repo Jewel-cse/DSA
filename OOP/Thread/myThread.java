@@ -1,4 +1,4 @@
-package OOP.Thread;
+package Thread;
 
 
 public class myThread extends Thread {
@@ -17,7 +17,7 @@ public class myThread extends Thread {
     public void run() {
         System.out.println("no arg");
     }
-
+    
     public void run(int i) {
         System.out.println("int arg");
     }
@@ -58,7 +58,6 @@ public class myThread extends Thread {
         System.out.println("child was wait until main thread complete");
     }
     }
-    */
     //@@ a  thread inpterrupt another thread
     public void run() {
         try{
@@ -68,4 +67,60 @@ public class myThread extends Thread {
             Thread.sleep(2000);
         }catch(Exception e){System.out.println("thread got interrupt");}
     }
+    
+    // Class level lock : used by static synchronized
+    DisplayWish d;
+    String name;
+    
+    myThread(DisplayWish d, String name) {
+        this.name = name;
+        this.d = d;
+    }
+    
+    public void run() {
+        d.wish(name);
+    }
+    
+    
+    DisplayWish d ;
+    
+    myThread(DisplayWish d) {
+        this.d = d;
+    }
+    
+    public void run() {
+        d.display();
+    }
+    
+    */
+
+    //@@@@@ Synchronized block: instead of method declare synchronized , block synchronized block  best : if 
+    /*
+     * @@@TO GET LOCK OF CURRENT OBJECT:
+     * synchronized(this){
+     *         ...........only current object
+     * }
+     * 
+     * @@@ TO GET LOCK OF PARTICULAR OBJECT b
+     * synchronized(b){
+     *      ............ only allow object b
+     * }
+     * 
+     * @@@ TO GET CLASS LEVEL LOCK
+     * synchronized(DisplayWish.class){
+     *        ............ display class er ekta class e at a time execute korbe
+     *  }
+     * 
+     * 
+     * 
+     * @@@@@@@@@@@@@@@@@@@@@@ dangerous error @@@@@@@@@@@@@ Dont do it..
+     * int x = 10;
+     * synchronized(x){
+     *          this provide compile time error: CE @@@@@@@
+     * }
+     * 
+     * 
+     * //Conclusion: block level synchronize is only applicable for object level or class leve
+     *              we can not pass primitive variable
+     */
 }

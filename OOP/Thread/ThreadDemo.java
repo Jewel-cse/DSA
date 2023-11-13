@@ -1,5 +1,4 @@
-package OOP.Thread;
-
+package Thread;
 public class ThreadDemo {
     public static void main(String[] args) throws InterruptedException {
         //System.out.println(Thread.currentThread().getName());

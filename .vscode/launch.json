@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "SynchronizerDemo",
+            "request": "launch",
+            "mainClass": "Thread.SynchronizerDemo",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "Child",
+            "request": "launch",
+            "mainClass": "Polymorphism.Child",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "SynchronizerDemo",
+            "request": "launch",
+            "mainClass": "OOP.Thread.SynchronizerDemo",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "HIndex2",
+            "request": "launch",
+            "mainClass": "BinarySearch.HIndex2",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
             "name": "ThreadDemo",
             "request": "launch",
             "mainClass": "OOP.Thread.ThreadDemo",

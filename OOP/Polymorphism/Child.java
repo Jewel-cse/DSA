@@ -4,7 +4,8 @@ import java.io.EOFException;
 import java.io.IOException;
 
 public class Child extends Parent {
-    public static String methodOne()  throws ArithmeticException,NullPointerException{  //has also parent object return type 
+    public String methodOne() throws ArithmeticException, NullPointerException { //has also parent object return type 
+        System.out.println("may child hoon");
         return null;
     }
 

@@ -3,7 +3,8 @@ package Polymorphism;
 public class Parent {
 
     
-    public static Object methodOne()  {
+    public  Object methodOne()  {
+        System.out.println("parent");
         return null;
     }
 }

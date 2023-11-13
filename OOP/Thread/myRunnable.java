@@ -1,4 +1,4 @@
-package OOP.Thread;
+package Thread;
 
 public class myRunnable implements Runnable{
     public void run() {
