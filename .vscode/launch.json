@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ThreadDemo",
+            "request": "launch",
+            "mainClass": "OOP.Thread.ThreadDemo",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
             "name": "MainCasting",
             "request": "launch",
             "mainClass": "MainCasting",
