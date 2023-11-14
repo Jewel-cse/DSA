@@ -1,0 +1,15 @@
+                java multithreading 
+            /                    \
+    Green thread           native os model
+
+
+Green thread::  [the thread which is complete manage by jvm without taking underlying os support]
+                :: sun solaries os support Green thread, not recommend
+native Os model:: [the thread which is manage by with the help of underlying os ]
+                :: all windows based os
+
+@@@@ how to stop a thread:::: t.stop()  deprecated method // database connection close na hote pare if agei stop kora hoi
+@@@@ how to suspend or resume a thread :::: suspend() and resume() in thread class
+                                       ::  these also deprecated method, not recommend
+
+

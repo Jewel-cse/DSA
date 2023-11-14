@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "DaemonThread",
+            "request": "launch",
+            "mainClass": "Thread.DaemonThread",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "DeadLock",
+            "request": "launch",
+            "mainClass": "Thread.DeadLock",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "ThreadA",
+            "request": "launch",
+            "mainClass": "Thread.ThreadA",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
             "name": "SynchronizerDemo",
             "request": "launch",
             "mainClass": "Thread.SynchronizerDemo",
