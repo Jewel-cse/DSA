@@ -6,6 +6,55 @@
     "configurations": [
         {
             "type": "java",
+            "name": "BioChemicalLaugingBomb",
+            "request": "launch",
+            "mainClass": "SRBD.BioChemicalLaugingBomb",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "BiColoring",
+            "request": "launch",
+            "mainClass": "SRBD.BiColoring",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "equationSolve",
+            "request": "launch",
+            "mainClass": "SRBD.equationSolve",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "RatInAMaze",
+            "request": "launch",
+            "mainClass": "Backtracking.RatInAMaze",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "AgressivCow",
+            "request": "launch",
+            "mainClass": "SRBD.AgressivCow",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "NQueen",
+            "request": "launch",
+            "mainClass": "Backtracking.NQueen",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "combinationSumIII",
+            "request": "launch",
+            "mainClass": "Recursion.combinationSumIII",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
             "name": "DaemonThread",
             "request": "launch",
             "mainClass": "Thread.DaemonThread",

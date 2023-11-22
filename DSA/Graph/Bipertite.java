@@ -19,7 +19,7 @@ public class Bipertite {
         for (ArrayList<Integer> arrayList : adj) {
             System.out.println(arrayList.toString());
         }
-        int[] color = new int[graph.length];
+        int[] color = new int[adj.size()+1];
         Arrays.fill(color, -1);
         
         for (int i = 0; i < color.length; i++) {
@@ -44,7 +44,7 @@ public class Bipertite {
                     q.add(nd);
                 } else if (color[nd] == color[node]) {
                     return false;
-                }
+                }  
             }
         }
         return true;
@@ -57,7 +57,9 @@ public class Bipertite {
 
         //int[][] graph = { { 1, 3 }, { 0, 2 }, { 1, 3 }, { 0, 2 } };
         //int[][] graph = { { 4 }, {}, { 4 }, { 4 }, { 0, 2, 3 } };
-        int[][] graph = { {}, { 3 }, {}, { 1 }, {} };
+        //int[][] graph = { {}, { 3 }, {}, { 1 }, {} };
+        int[][] graph = { { 0, 1 }, { 1, 2 } };
+        
         System.out.println(isBipartite(graph));
     }
 }
