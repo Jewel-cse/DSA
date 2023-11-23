@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class BiColoring {
     // this method take input edges and provide the adjacency list
     private static List<List<Integer>> buildAdj(int[][] edges) {
-        int vertics = edges.length+1;
+        int vertics = edges.length+1; // no of vertics = number of edge + 1
         List<List<Integer>> adj = new ArrayList<>();
         for (int i = 0; i < vertics; i++) {
             adj.add(new ArrayList<>());
