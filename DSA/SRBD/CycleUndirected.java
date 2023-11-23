@@ -32,7 +32,7 @@ public class CycleUndirected {
         return adj;
     }
     //cycle detection @@@ BFS TECHNIQUE
-    private static boolean checkCycle(int src, List<List<Integer>> adj, boolean[] vis) {
+    private static boolean checkCycle_BFS(int src, List<List<Integer>> adj, boolean[] vis) {
         Queue<Pair> q = new LinkedList<>();
         q.add(new Pair(src, -1));
         vis[src] = true;
@@ -51,16 +51,34 @@ public class CycleUndirected {
         }
         return false;
     }
+
+    //cycle detection @@@@@@@@@  DFS TECHNIQUE
+    private static boolean checkCycle_DFS(int node, int parent, List<List<Integer>> adj, boolean[] vis) {
+        vis[node] = true;
+        for (Integer adjnd : adj.get(node)) {
+            if (!vis[adjnd]) {
+                if (checkCycle_DFS(adjnd, node, adj, vis))
+                    return true;
+            }
+            else if (adjnd != parent)
+                return true;
+        }
+        return false;
+    }
+
     /// check for the cycle of @@@@@@@ UNDIRECTED graph
     private static boolean isCycle(int V, List<List<Integer>> adj) {
         boolean[] vis = new boolean[V]; //node start from 0 to n-1
         for (int i = 0; i < vis.length; i++) {
             if (!vis[i]) {
-                if(checkCycle(i, adj, vis)) return true;
+                //if (checkCycle_BFS(i, adj, vis))
+                if(checkCycle_DFS(i, -1, adj, vis))
+                    return true;
             }
         }
         return false;
     }
+    
     
     ///@@@@@@@@@@@@@@ MAIN FUNCTION 
     public static void main(String[] args) {

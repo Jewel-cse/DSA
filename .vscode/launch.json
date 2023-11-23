@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "cycleDirectedGraph",
+            "request": "launch",
+            "mainClass": "SRBD.cycleDirectedGraph",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
             "name": "CycleUndirected",
             "request": "launch",
             "mainClass": "SRBD.CycleUndirected",
