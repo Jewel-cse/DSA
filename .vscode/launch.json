@@ -6,6 +6,69 @@
     "configurations": [
         {
             "type": "java",
+            "name": "lineTrip",
+            "request": "launch",
+            "mainClass": "Contest.lineTrip",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "testCrow",
+            "request": "launch",
+            "mainClass": "SRBD.testCrow",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "DoctorsPobability",
+            "request": "launch",
+            "mainClass": "SRBD.DoctorsPobability",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "PathWithMinEffort",
+            "request": "launch",
+            "mainClass": "PathWithMinEffort",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "CrowPot2",
+            "request": "launch",
+            "mainClass": "SRBD.CrowPot2",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "ShortestPathBinaryMaze",
+            "request": "launch",
+            "mainClass": "ShortestPathBinaryMaze",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "test",
+            "request": "launch",
+            "mainClass": "SRBD.test",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "EndoseCope",
+            "request": "launch",
+            "mainClass": "SRBD.EndoseCope",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "chessBoard2",
+            "request": "launch",
+            "mainClass": "SRBD.chessBoard2",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
             "name": "cycleDirectedGraph",
             "request": "launch",
             "mainClass": "SRBD.cycleDirectedGraph",
