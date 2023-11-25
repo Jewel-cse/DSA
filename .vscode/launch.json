@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "RestRoom",
+            "request": "launch",
+            "mainClass": "SRBD.RestRoom",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "spaceShipExpolsion",
+            "request": "launch",
+            "mainClass": "SRBD.spaceShipExpolsion",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "CheapestFlightwithKstops",
+            "request": "launch",
+            "mainClass": "CheapestFlightwithKstops",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
             "name": "lineTrip",
             "request": "launch",
             "mainClass": "Contest.lineTrip",

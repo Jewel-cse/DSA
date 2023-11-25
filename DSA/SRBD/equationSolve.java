@@ -35,8 +35,8 @@ public class equationSolve {
 
     ////main function....................
     public static void main(String[] args) {
-        long a = 128, b = 123, c = 5, x = 10;
-        //long a = 18, b = 25, c = 7, x = 324;
+        //long a = 128, b = 123, c = 5, x = 10;
+        long a = 1, b = 1, c = 1, x = 400;
         //long a = 12, b = 88, c = 7, x = 2344;
         System.out.println(solve(a, b, c, x));
     }
