@@ -1,11 +1,13 @@
 package SRBD;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
-public class cycleDirectedGraph {
-    ///////@@@@@@@@ build adjacency list for @@@@@@@@@ directed graph
+public class printCycleDirected {
+
+     ///////@@@@@@@@ build adjacency list for @@@@@@@@@ directed graph
     private static List<List<Integer>> buildAdjforDirectedGraph(int n, int[][] edges) {
         List<List<Integer>> adj = new ArrayList<>();
         for (int i = 0; i <= n; i++) {
@@ -19,27 +21,33 @@ public class cycleDirectedGraph {
 
     ///@@@@@@@@@@@ dfs technique for detection cycle of directed graph...........
     private static boolean isCycle_dfs(int node, int parent, List<List<Integer>> adj, boolean[] vis,
-            boolean[] pathVis) {
+            boolean[] pathVis,List<Integer>ans) {
         vis[node] = true;
         pathVis[node] = true;
         for (Integer adjnd : adj.get(node)) {
             if (!vis[adjnd]) {
-                if (isCycle_dfs(adjnd, node, adj, vis, pathVis))
+                if (isCycle_dfs(adjnd, node, adj, vis, pathVis,ans)) {
+                    //System.out.print(adjnd +" ");
+                    if(!ans.contains(adjnd))    ans.add(adjnd);
                     return true;
-            } else if (pathVis[adjnd])
+                }
+            } else if (pathVis[adjnd]) {
+                //System.out.print(adjnd+" ");
+                if (!ans.contains(adjnd))    ans.add(adjnd);
                 return true;
+            }
         }
         pathVis[node] = false; // extra path visited array 
         return false;
     }
 
     //@@@@ Calling from MAIN @@@@@
-    private static boolean detectCycle(int n, List<List<Integer>> adj) {
+    private static boolean detectCycle(int n, List<List<Integer>> adj,List<Integer>ans) {
         boolean[] vis = new boolean[n+1];
         boolean[] pathVis = new boolean[n+1];
         for (int i = 0; i <= n; i++) {  //n is number of node
             if (!vis[i]) {
-                if (isCycle_dfs(i, -1, adj, vis, pathVis)) {
+                if (isCycle_dfs(i, -1, adj, vis, pathVis,ans)) {
                     return true;
                 }
 
@@ -61,8 +69,11 @@ public class cycleDirectedGraph {
                 edges[i][1] = sc.nextInt();
             }
             List<List<Integer>> adj = buildAdjforDirectedGraph(n, edges);
-            //need vis and pathvisited aray
-            System.out.println(detectCycle(n, adj));
+            //need vis and pathvisited aray and make a list
+            List<Integer> ans = new ArrayList<>();
+            detectCycle(n, adj,ans);
+            Collections.sort(ans);
+            System.out.println(ans.toString());
         }
     }
 
@@ -71,6 +82,10 @@ public class cycleDirectedGraph {
 Test Case: 
 5 5
 1 2 2 4 4 5 5 3 3 2
-true;
+true; 2 3 4 5
+
+5 5
+2 4 2 3 4 3 1 5 5 1
+true: 1 5 
 
  */

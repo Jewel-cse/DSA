@@ -6,6 +6,97 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Warmhole",
+            "request": "launch",
+            "mainClass": "SRBD.Warmhole",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "DetectNPrintSmallestcycleDirected",
+            "request": "launch",
+            "mainClass": "SRBD.DetectNPrintSmallestcycleDirected",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "sumOfNodeKthLevel",
+            "request": "launch",
+            "mainClass": "SRBD.sumOfNodeKthLevel",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "printCycleDirected",
+            "request": "launch",
+            "mainClass": "SRBD.printCycleDirected",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "RockClimbing",
+            "request": "launch",
+            "mainClass": "SRBD.RockClimbing",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "FrogJump2D",
+            "request": "launch",
+            "mainClass": "SRBD.FrogJump2D",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "TargetSum",
+            "request": "launch",
+            "mainClass": "DP.TargetSum",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "minimumCoinDP",
+            "request": "launch",
+            "mainClass": "DP.minimumCoinDP",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "knapSack01",
+            "request": "launch",
+            "mainClass": "DP.knapSack01",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Contest.Main",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "FisherMen",
+            "request": "launch",
+            "mainClass": "SRBD.FisherMen",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "PartitionEqualSS",
+            "request": "launch",
+            "mainClass": "DP.PartitionEqualSS",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "test_dp",
+            "request": "launch",
+            "mainClass": "DP.test_dp",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
             "name": "RestRoom",
             "request": "launch",
             "mainClass": "SRBD.RestRoom",
