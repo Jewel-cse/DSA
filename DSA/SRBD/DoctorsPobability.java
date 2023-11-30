@@ -88,7 +88,6 @@ public class DoctorsPobability {
                     finalDivision = i;
                 }
             }
-
             System.out.printf("%d %.6f\n", finalDivision, finalProb);
         }
         scanner.close();

@@ -67,12 +67,13 @@ public class RestRoom {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
-        while (t-->0) {
+        while (t-- > 0) {
             int NumberOfstalls = sc.nextInt();
             int men = sc.nextInt();
             boolean[] stalls = new boolean[NumberOfstalls];
             arrangeGuest(stalls, men);
             System.out.println(Arrays.toString(stalls));
         }
+        sc.close();
     }
 }

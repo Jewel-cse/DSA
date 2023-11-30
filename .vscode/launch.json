@@ -6,6 +6,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "BurstBallons",
+            "request": "launch",
+            "mainClass": "DP.BurstBallons",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "flipColumn",
+            "request": "launch",
+            "mainClass": "DP.flipColumn",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "TravellingSalesMan",
+            "request": "launch",
+            "mainClass": "DP.TravellingSalesMan",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "CutStick",
+            "request": "launch",
+            "mainClass": "DP.CutStick",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "MatrixChainMultiplication",
+            "request": "launch",
+            "mainClass": "DP.MatrixChainMultiplication",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "KimRefrigerator",
+            "request": "launch",
+            "mainClass": "SRBD.KimRefrigerator",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
             "name": "Warmhole",
             "request": "launch",
             "mainClass": "SRBD.Warmhole",

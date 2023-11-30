@@ -2,7 +2,6 @@ package SRBD;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Scanner;
 /*  detect cycle in graph:
@@ -75,17 +74,17 @@ public class DetectNPrintSmallestcycleDirected {
             boolean[] vis = new boolean[n + 1];
             List<Integer> pathList = new ArrayList<>();
             List<List<Integer>> cycleList = new ArrayList<>();
-            HashSet<List<Integer>> hs = new HashSet<List<Integer>>();
             for (int i = 0; i < n + 1; i++) {
                 if (!vis[i]) {
                     findCycleList(i, adj, vis, pathList, cycleList);
                 }
             }
             for (Integer element : cycleList.get(0)) {
-                System.out.print(element +" ");
+                System.out.print(element + " ");
             }
-            
+
         }
+        sc.close();
     }
 
 }
