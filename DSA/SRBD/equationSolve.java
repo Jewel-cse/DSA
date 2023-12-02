@@ -1,44 +1,67 @@
 package SRBD;
 
-public class equationSolve {
-    //calculate log2 base function
-    public static int log2(int x) {
-        if (x <= 0) {
-            throw new IllegalArgumentException("Input must be a positive integer");
+/*<Binary search>
+Solve the equation f(k) = a * k + b * k * log2(k) + c * k^3;
+Input: a , b , c , x where x is the result of the equation i.e. f(k) = x
+Output: find the value of k such that f(k) = x
+[NOTE: All value will fit in 64 bit integer]
+
+Sample input/output:
+1 2 3 30
+k = 2 
+
+2 3 1 84 
+k = 4
+
+0 5 3 69
+k = 3
+*/
+import java.util.*;
+public class EquationSolve {
+   
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int tc = scanner.nextInt();
+        while (tc-- > 0) {
+            long a = scanner.nextLong();
+            long b = scanner.nextLong();
+            long c = scanner.nextLong();
+            long x = scanner.nextLong();
+
+            Long ans = solve(a, b, c, x);
+            System.out.println("ans : " + ans);
         }
-        return (int) (Math.log(x) / Math.log(2));
-    }
-    //calculate is zero
-    private static long isZero(long a, long b, long c, long x, int k) {
-        return  (a*k+b*k*log2(k)+c*k*k*k - x);
-    }
-    //solve equation
-    private static int solve(long a, long b, long c, long x) {
-        int low = 1;
-        int high  = Integer.MAX_VALUE;
-        if(a<10 && b<10 && c>0)
-            high = 1000;
-        else if(a<100 && b <100 && c>0)
-            high = 10000000;
-        //now search for k value
-        while (low<=high) {
-            int k = low + (high - low) / 2;
-            if(isZero(a,b,c,x,k) == 0)
-                return k;
-            else if(isZero(a, b, c, x, k)<0)
-                low = k + 1;
-            else
-                high = k - 1;
-        }
-        return 0;
+        scanner.close();
     }
 
-    ////main function....................
-    public static void main(String[] args) {
-        //long a = 128, b = 123, c = 5, x = 10;
-        long a = 1, b = 1, c = 1, x = 400;
-        //long a = 12, b = 88, c = 7, x = 2344;
-        System.out.println(solve(a, b, c, x));
+    private static long getans(long a,long b,long c,long k) {
+        long ans = a * k + b * k * log(k);
+        if (c != 0) {
+            ans += c * k * k * k;
+        }
+        return ans;
     }
-    //5*k+5*k*log2 k + 5*k*k*k = 10
+
+    private static long log(long k) {
+        return (long) (Math.log(k)/Math.log(2));
+    }
+
+    private static Long solve(long a, long b, long c, long x) {
+        long low = 0, high = x, mid;
+        while (low<= high) {
+            mid = low + (high - low) / 2;
+            if(getans(a,b,c,mid) == x)
+                return mid;
+            else if (getans(a, b, c, mid) < x) {
+                low = mid +1;
+            }
+            else
+                high = mid - 1;
+        }
+        return low;
+    }
 }
+
+    

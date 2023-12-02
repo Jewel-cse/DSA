@@ -22,14 +22,14 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class PhysicalEnergyREC_DP {
-    //@@@@@@@@@@ using recursion @@@@@@@@@@@@@@@@@@@
-    private static int mintime_rec(int h, int d, int n, int[] time, int[] cost) {
-        if (n < 0 || h < 0) // energy negative and not any time available 
+    //@@@@@@@@@@ using recursion @@@@@@@@@@@@@@@@@@@(Combination problem)
+    private static int mintime_rec(int h, int d, int ind, int[] time, int[] cost) {
+        if (ind < 0 || h < 0) // energy negative and not any time available 
             return (int) 1e9; //so return max
         if (d == 0) //distance 0 ,so no time requierd any more
             return 0;
-        int nonPick = mintime_rec(h, d, n - 1, time, cost);
-        int pick = time[n] + mintime_rec(h - cost[n], d - 1, n, time, cost);
+        int nonPick = mintime_rec(h, d, ind - 1, time, cost);
+        int pick = time[ind] + mintime_rec(h - cost[ind], d - 1, ind, time, cost);
         return Math.min(nonPick, pick);
     }
 

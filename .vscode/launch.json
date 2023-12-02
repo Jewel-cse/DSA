@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "MrLeeOfficeVisit",
+            "request": "launch",
+            "mainClass": "SRBD.MrLeeOfficeVisit",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "MColor",
+            "request": "launch",
+            "mainClass": "Backtracking.MColor",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "ResearchTeam",
+            "request": "launch",
+            "mainClass": "SRBD.ResearchTeam",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "JeweMaze",
+            "request": "launch",
+            "mainClass": "SRBD.JeweMaze",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
             "name": "BurstBallons",
             "request": "launch",
             "mainClass": "DP.BurstBallons",

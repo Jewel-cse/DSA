@@ -32,6 +32,7 @@ public class DoctorsPobability {
     /*  if a goes to b > P(x) and b goes to c >P(y) 
      *            then a goes to c >> P(x)*P(y)
      */
+    // //arrray, number of nodes, current not,time,probability, ans
     private static void docProb(double[][] graph, int nodes, int time, int curNode, double p, double[] answer) {
         //time  <= 0 holei answer update and return. 
         if (time <= 0) {
@@ -76,6 +77,7 @@ public class DoctorsPobability {
             }
             //call function for probability
             double[] answer = new double[nodes + 1];
+           
             docProb(arr, nodes, time, 1, 1.0, answer);
 
             double finalProb = 0.0;
@@ -93,5 +95,3 @@ public class DoctorsPobability {
         scanner.close();
     }
 }
-
-
