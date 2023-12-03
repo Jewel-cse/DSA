@@ -25,6 +25,8 @@ public class MColor {
         int[] color = new int[n + 1];
         boolean check = graphcoloring(0, adj.size(), numberofcolor, adj, color);
         System.out.println(check);
+
+        sc.close();
     }
 
     //@@@@@@@@@@@@@@ key point of this algo

@@ -104,6 +104,9 @@ public class JeweMaze {
             return;
         }
         //go for the 4 direction if it is not visited 
+        //have jewel ? value +1 if have
+        //call with values
+        //backtracking
         for (int i = 0; i < dir.length; i++) {
             int xx = sx + dir[i][0];
             int yy = sy + dir[i][1];
