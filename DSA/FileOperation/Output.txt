@@ -1,0 +1,2 @@
+sum of the array : 283
+multiplication of the element  : 1998792

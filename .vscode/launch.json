@@ -6,6 +6,55 @@
     "configurations": [
         {
             "type": "java",
+            "name": "arrayRead",
+            "request": "launch",
+            "mainClass": "FileOperation.arrayRead",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "LongestIncreasingSubsequence",
+            "request": "launch",
+            "mainClass": "DP.LongestIncreasingSubsequence",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "OilMInes",
+            "request": "launch",
+            "mainClass": "SRBD.OilMInes",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "sinkholes",
+            "request": "launch",
+            "mainClass": "SRBD.sinkholes",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "StringCompression",
+            "request": "launch",
+            "mainClass": "SRBD.StringCompression",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "OldPhone",
+            "request": "launch",
+            "mainClass": "SRBD.OldPhone",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "NumberOfwaysToreachDestination",
+            "request": "launch",
+            "mainClass": "NumberOfwaysToreachDestination",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
             "name": "MrLeeOfficeVisit",
             "request": "launch",
             "mainClass": "SRBD.MrLeeOfficeVisit",
