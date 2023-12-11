@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "newTest",
+            "request": "launch",
+            "mainClass": "SRBD.newTest",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "RockClimbingDij",
+            "request": "launch",
+            "mainClass": "SRBD.RockClimbingDij",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
             "name": "arrayRead",
             "request": "launch",
             "mainClass": "FileOperation.arrayRead",

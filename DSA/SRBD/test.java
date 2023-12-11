@@ -1,68 +1,121 @@
 package SRBD;
 
 import java.util.Arrays;
+import java.util.PriorityQueue;
 import java.util.Scanner;
+/*
+
+15x20
+1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 
+1 0 1 0 1 0 1 0 1 3 0 0 1 0 1 0 1 0 1 0 
+1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 
+1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 
+1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 
+1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 
+1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 
+1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 
+1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 
+1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 
+1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 
+1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 
+1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 
+1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 
+1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 
+ */
+
+
 
 public class test {
+    static class Pair {
+        int dis, x, y;
+
+        Pair(int dis, int x, int y) {
+            this.dis = dis;
+            this.x = x;
+            this.y = y;
+        }
+        
+    }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt(); //row
-        int m = sc.nextInt(); //col
-        int[][] graph = new int[n][m];
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
-                graph[i][j] = sc.nextInt();
+        int test = sc.nextInt();
+        while (test-- > 0) {
+
+            int row = sc.nextInt();
+            int col = sc.nextInt();
+
+            int[][] graph = new int[row][col];
+            for (int i = 0; i < row; i++) {
+                for (int j = 0; j < col; j++) {
+                    graph[i][j] = sc.nextInt();
+                }
             }
+            //input done
+            boolean[][] vis = new boolean[row][col];
+            
+           System.out.println(f(row - 1, 0, graph, vis));
         }
-        //input done
-        boolean[][] vis = new boolean[n][m];
-        boolean[] flag = { false };
-        for (int l = 0; l < n; l++) {
-            climb(n - 1, 0, l, graph, vis, flag);
-            if (flag[0]) {
-                System.out.println(l);
-                break;
-            }
-            for (boolean[] v : vis) {
-                Arrays.fill(v, false);
-            }
-        }
+
+        sc.close();
     }
 
-    private static void climb(int r, int c, int l, int[][] graph, boolean[][] vis, boolean[] flag) {
-        int row = graph.length;
-        int col = graph[0].length;
-        if (r < 0 || r >= row || c < 0 || c >= col || vis[r][c]) {
-            return;
+    private static int f(int r, int c, int[][] graph, boolean[][] vis) {
+        
+        PriorityQueue<Pair> p = new PriorityQueue<>((a,b)->a.dis - b.dis);
+        p.add(new Pair(0, r, c));
+        
+        int ans = Integer.MIN_VALUE;
+        while (!p.isEmpty()) {
+            Pair it = p.poll();
+            int dis = it.dis;
+            int x = it.x;
+            int y = it.y;
+            vis[x][y] = true;
+
+            ans = Math.max(ans, dis);
+            if (graph[x][y] == 3) {
+                break;
+            }
+
+            //go right
+            for (int i = y + 1; i < graph[0].length; i++) {
+                if (graph[x][i] == 0)
+                    break;
+                if (!vis[x][i]) {
+                    p.add(new Pair(0, x, i));
+                    break;
+                }
+            }
+            //go left
+            for (int i = y - 1; i >= 0; i--) {
+                if (graph[x][i] == 0)
+                    break;
+                if (!vis[x][i]) {
+                    p.add(new Pair(0, x, i));
+                    break;
+                }
+            }
+            //go down
+            for (int i = x + 1; i < graph.length; i++) {
+                if (graph[i][y] == 0)
+                    continue;
+                if (!vis[i][y]) {
+                    p.add(new Pair(Math.abs(i - x), i, y));
+                    break;
+                }
+            }
+            //go up
+            for (int i = x - 1; i >= 0; i--) {
+                if (graph[i][y] == 0)
+                    continue;
+                if (!vis[i][y]) {
+                    p.add(new Pair(Math.abs(i - x), i, y));
+                    break;
+                }
+            }
+
         }
-        if (graph[r][c] == 3) {
-            flag[0] = true;
-            return;
-        }
-        vis[r][c] = true;
-        //left, right, up and down
-        if (c + 1 < col && graph[r][c + 1] != 0 && !vis[r][c + 1])
-            climb(r, c + 1, l, graph, vis, flag);
-        if (c - 1 >= 0 && graph[r][c - 1] != 0 && !vis[r][c - 1])
-            climb(r, c - 1, l, graph, vis, flag);
-        for (int h = 1; h <= l; h++) {
-            if (r - h >= 0 && graph[r - h][c] != 0 && !vis[r - h][c])
-                climb(r - h, c, l, graph, vis, flag);
-        }
-        for (int h = 1; h <= l; h++) {
-            if (r + h < row && graph[r + h][c] != 0 && !vis[r + h][c])
-                climb(r + h, c, l, graph, vis, flag);
-        }
+        return ans;
     }
+    
 }
-/*
-1 0 0 1 1 1 0 1 0 1
-0 1 0 0 0 1 1 0 1 1
-0 0 0 1 0 1 0 1 1 1
-1 1 1 0 1 0 0 0 1 1
-1 0 1 0 1 0 3 0 1 0
-0 1 0 1 0 0 0 0 0 1
-0 0 0 0 0 0 0 0 1 1
-0 0 1 0 0 0 0 0 1 0
-0 1 0 1 0 1 0 0 0 1
- */
