@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class KimRefrigerator {
     private static int mx = (int) 1e9;
+    
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int t = 10;  //by default
@@ -26,12 +27,14 @@ public class KimRefrigerator {
             dis[0] = mx;
             ways(0, custloc, sx, sy, ex, ey, dis);
             System.out.println("# " + serial + " " + dis[0]);
+            
             serial++;
         }
         sc.close();
     }
 
-    private static void ways(int ind, int[][] custloc, int sx, int sy, int ex, int ey,int[] dis) {
+    private static void ways(int ind, int[][] custloc, int sx, int sy, int ex, int ey, int[] dis) {
+        
         if (ind == custloc.length) {
             //get one permutation, calculate distance
             dis[0] = Math.min(dis[0], getDistance(sx, sy, ex, ey, custloc));
@@ -64,6 +67,7 @@ public class KimRefrigerator {
     }
 }
 /*
+(office)(home)()
 5
 0 0 100 100 70 40 30 10 10 5 90 70 50 20
 6

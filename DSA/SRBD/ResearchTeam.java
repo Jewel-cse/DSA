@@ -87,10 +87,8 @@ public class ResearchTeam {
                     }
                 }
             }
-
         }
         return ans;
-    
     }
 
     private static boolean isValid(int nr, int nc, int[][] grid, boolean[][] vis) {

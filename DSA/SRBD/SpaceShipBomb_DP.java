@@ -65,13 +65,13 @@ public class SpaceShipBomb_DP {
         sc.close();
     }
 
-    private static int findmaxCoin_dp(int row, int i, int j, char[][] mat) {
+    private static int findmaxCoin_dp(int row, int c, int bomb, char[][] mat) {
         
         int[][] dp = new int[row][5];
         for (int[] d : dp) {
             Arrays.fill(d, -1);
         }
-        return findmaxCoin(row, i, j, mat,dp);
+        return findmaxCoin(row, c, bomb, mat,dp);
     }
 }
     

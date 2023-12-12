@@ -56,31 +56,29 @@ public class BiColoring {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int t, vertics;
-        while (true) {
-            t = sc.nextInt();
-            if (t == 0)
-                return;
-
+        t = sc.nextInt();
+        while (t-->0) {
+            
             vertics = sc.nextInt();
             int edges[][] = new int[vertics][2];
-
+            List<List<Integer>> adj = new ArrayList<>();
+            for (int i = 0; i < vertics+1; i++)
+                adj.add(new ArrayList<>());
             for (int i = 0; i < vertics; i++) {
-                int a, b;
-                a = sc.nextInt();
-                b = sc.nextInt();
-
-                edges[i][0] = a;
-                edges[i][1] = b;
+                edges[i][0] = sc.nextInt();
+                edges[i][1] = sc.nextInt();
+                
+                adj.get(edges[i][0]).add(edges[i][1]);   //undirected graph
+                adj.get(edges[i][1]).add(edges[i][0]);
             }
             //int[][] edges = { { 0, 1 }, { 0, 2 }, { 1, 3 }, { 2, 4 }, { 3, 5 }, { 4, 5 } };
 
-            List<List<Integer>> aj = buildAdj(edges);
             /* 
              for (List<Integer> list : aj) {
              System.out.println(list.toString());
              }
              */
-            boolean isBicolorable = isBicolorable(aj);
+            boolean isBicolorable = isBicolorable(adj);
             System.out.println(isBicolorable ? "BICLORABLE" : "NOT BICOLORABLE");
         }
     }

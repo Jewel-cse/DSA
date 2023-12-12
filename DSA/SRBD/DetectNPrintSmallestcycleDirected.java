@@ -15,7 +15,7 @@ import java.util.Scanner;
     
 public class DetectNPrintSmallestcycleDirected {
     
-    // BFS CYCLE DETECT AND CREATE CYCLE LIST
+    // DFS CYCLE DETECT AND CREATE CYCLE LIST
     //need node,adj, vis[],pathList,cycleList
     private static int mx = (int) 1e9;
     private static void findCycleList(int node, List<List<Integer>> adj, boolean[] vis, List<Integer> pathList,
@@ -38,7 +38,6 @@ public class DetectNPrintSmallestcycleDirected {
                     Collections.sort(clist);
                     cyList.add(clist);
                 }
-                
             }
         }
         vis[node] = false;

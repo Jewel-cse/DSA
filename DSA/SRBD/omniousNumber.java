@@ -35,13 +35,13 @@ public class omniousNumber {
         int count = 0;
         for (int i = a; i <= b; i++) {
             int temp = i;
+            //create digit array 0 to 9 with the frequency
             int[] digitArray = new int[10];
-
             while (temp > 0) {
                 digitArray[temp % 10]++;
                 temp /= 10;
             }
-
+            //check for forbidden digit 
             int forbiddenK = 0;
             for (int j = 0; j < n; j++) {
                 forbiddenK += digitArray[delNos[j]];

@@ -27,6 +27,7 @@ Input
 2 
 2 4 
 6 13 10 2 
+
 2 4 
 6 10 13 2 
 
@@ -35,6 +36,7 @@ output
 1
 */
 import java.util.Scanner;
+
 public class OilMInes {
     static int companies, mines;
     static int mxx = Integer.MAX_VALUE;
@@ -56,7 +58,7 @@ public class OilMInes {
             int newMin = min(sum, minV);
             int newMax = max(sum, maxV);
 
-            if (nodes == companies - 1) {
+            if (nodes == companies - 1) { //number of group  done
                 ANS[0] = min(ANS[0], newMax - newMin);
             }
             return;
@@ -65,12 +67,10 @@ public class OilMInes {
         // Main Case
         visited[i] = true;
         int j = (i + 1) % mines;
-
         calculateOilMines(j, oilMines, visited, minV, maxV, sum + oilMines[i], nodes, ANS);
 
         int newMin = min(sum, minV);
         int newMax = max(sum, maxV);
-
         calculateOilMines(j, oilMines, visited, newMin, newMax, oilMines[i], nodes + 1, ANS);
 
         visited[i] = false;
@@ -81,14 +81,13 @@ public class OilMInes {
         Scanner scanner = new Scanner(System.in);
         int t = scanner.nextInt();
         while (t-- > 0) {
-            companies = scanner.nextInt();
+            companies = scanner.nextInt(); //number of groups 
             mines = scanner.nextInt();
             int[] oilMines = new int[mines];
             boolean[] visited = new boolean[mines];
 
-            for (int i = 0; i < mines; i++) 
+            for (int i = 0; i < mines; i++)
                 oilMines[i] = scanner.nextInt();
-            
 
             int[] ANS = new int[1];
             ANS[0] = mxx;

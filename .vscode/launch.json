@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "EndoseCope2",
+            "request": "launch",
+            "mainClass": "SRBD.EndoseCope2",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
             "name": "newTest",
             "request": "launch",
             "mainClass": "SRBD.newTest",

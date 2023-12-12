@@ -64,7 +64,6 @@ public class FisherMen {
             vis[r] = false;
             gates[currentGate].men++;
         }
-
     }
 
     private static int findLeft(int loc, boolean[] vis) {

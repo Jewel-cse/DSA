@@ -1,121 +1,112 @@
 package SRBD;
-
-import java.util.Arrays;
-import java.util.PriorityQueue;
-import java.util.Scanner;
 /*
+Sample Input:
+2
 
-15x20
-1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 
-1 0 1 0 1 0 1 0 1 3 0 0 1 0 1 0 1 0 1 0 
-1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 
-1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 
-1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 
-1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 
-1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 
-1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 
-1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 
-1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 
-1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 
-1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 
-1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 
-1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 
-1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 
+5
+0 0 0 2 0
+2 1 0 1 2
+0 0 2 2 0
+0 1 0 1 2
+2 0 0 0 0
+6
+0 1 2 1 0 0
+0 1 0 0 0 0
+0 1 2 1 2 1
+0 2 0 1 0 2
+0 1 0 1 0 1
+2 0 2 1 0 0
+
  */
 
-
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
 
 public class test {
-    static class Pair {
-        int dis, x, y;
 
-        Pair(int dis, int x, int y) {
-            this.dis = dis;
-            this.x = x;
-            this.y = y;
-        }
-        
-    }
+    
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int test = sc.nextInt();
-        while (test-- > 0) {
 
-            int row = sc.nextInt();
-            int col = sc.nextInt();
+        int numberofnode = sc.nextInt();
+        int numberofEdge = sc.nextInt();
 
-            int[][] graph = new int[row][col];
-            for (int i = 0; i < row; i++) {
-                for (int j = 0; j < col; j++) {
-                    graph[i][j] = sc.nextInt();
-                }
-            }
-            //input done
-            boolean[][] vis = new boolean[row][col];
-            
-           System.out.println(f(row - 1, 0, graph, vis));
+        int[][] edges = new int[numberofEdge][2];
+        ArrayList<ArrayList<Integer>> adj = new ArrayList<>();
+        for (int i = 0; i < numberofnode + 1; i++) {
+            adj.add(new ArrayList<>());
+        }
+        //take input edges
+        for (int i = 0; i < numberofEdge; i++) {
+            edges[i][0] = sc.nextInt();
+            edges[i][1] = sc.nextInt();
+
+            adj.get(edges[i][0]).add(edges[i][1]);
+            adj.get(edges[i][1]).add(edges[i][0]); //done adjacency list
         }
 
-        sc.close();
+        //is bicolorable
+        System.out.println("Is bicolorable graph : " + isbicolorable(adj));
+        //check cycle for undirected graph
+        System.out.println("Has cycle of the graph: " + isCycle(numberofnode, adj));
+    }
+    //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ CICYLE OF UNDIRECTED @@@@@@@@@@@@@@@@@@@@@
+    private static boolean isCycle(int numberofnode, ArrayList<ArrayList<Integer>> adj) {
+        //need vis,v,adj
+        boolean[] vis = new boolean[numberofnode];
+        for (int i = 0; i < vis.length; i++) {
+            if (!vis[i]) {
+                if (HasCycle(i, -1, adj, vis))
+                    return true;
+            }
+        }
+        return false;
     }
 
-    private static int f(int r, int c, int[][] graph, boolean[][] vis) {
-        
-        PriorityQueue<Pair> p = new PriorityQueue<>((a,b)->a.dis - b.dis);
-        p.add(new Pair(0, r, c));
-        
-        int ans = Integer.MIN_VALUE;
-        while (!p.isEmpty()) {
-            Pair it = p.poll();
-            int dis = it.dis;
-            int x = it.x;
-            int y = it.y;
-            vis[x][y] = true;
-
-            ans = Math.max(ans, dis);
-            if (graph[x][y] == 3) {
-                break;
+    private static boolean HasCycle(int node, int parent, ArrayList<ArrayList<Integer>> adj, boolean[] vis) {
+        vis[node] = true;
+        for (Integer adjnd : adj.get(node)) {
+            if (!vis[adjnd]) {
+                if (HasCycle(adjnd, node, adj, vis))
+                    return true;
+                else if (adjnd != parent)
+                    return true;
             }
-
-            //go right
-            for (int i = y + 1; i < graph[0].length; i++) {
-                if (graph[x][i] == 0)
-                    break;
-                if (!vis[x][i]) {
-                    p.add(new Pair(0, x, i));
-                    break;
-                }
-            }
-            //go left
-            for (int i = y - 1; i >= 0; i--) {
-                if (graph[x][i] == 0)
-                    break;
-                if (!vis[x][i]) {
-                    p.add(new Pair(0, x, i));
-                    break;
-                }
-            }
-            //go down
-            for (int i = x + 1; i < graph.length; i++) {
-                if (graph[i][y] == 0)
-                    continue;
-                if (!vis[i][y]) {
-                    p.add(new Pair(Math.abs(i - x), i, y));
-                    break;
-                }
-            }
-            //go up
-            for (int i = x - 1; i >= 0; i--) {
-                if (graph[i][y] == 0)
-                    continue;
-                if (!vis[i][y]) {
-                    p.add(new Pair(Math.abs(i - x), i, y));
-                    break;
-                }
-            }
-
         }
-        return ans;
+        return false;
+    }
+    //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    //////////////@@@@@@@@@@@@@@ IS BICOLORABLE @@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    private static boolean isbicolorable(ArrayList<ArrayList<Integer>> adj) {
+        int[] color = new int[adj.size()];
+        Arrays.fill(color, -1);
+        for (int i = 0; i < color.length; i++) {
+            if (color[i] == -1 && !isBipartite(i, adj, color))
+                return false;
+        }
+        return true;
+    }
+
+    private static boolean isBipartite(int i, ArrayList<ArrayList<Integer>> adj, int[] color) {
+        Queue<Integer> q = new LinkedList<>();
+        q.add(i);
+        color[i] = 0;
+        while (!q.isEmpty()) {
+            int node = q.poll();
+            for (Integer adjNode : adj.get(node)) {
+                if (color[adjNode] == -1) { //not visited
+                    color[adjNode] = 1 - color[node];
+                    q.add(adjNode);
+                } else if (color[adjNode] == color[node])
+                    return false;
+            }
+        }
+        return true;
     }
     
 }

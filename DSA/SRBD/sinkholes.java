@@ -54,7 +54,7 @@ public class sinkholes {
         for (int i = 0; i <= N - mid; i++) {
             for (int j = 0; j <= M - mid; j++) {
                 /*
-                dp
+                dp 
                 (+)    -
                 -    +
                 
@@ -74,6 +74,7 @@ public class sinkholes {
         return minsum;
     }
 
+    //////@@@@@@@@@@ MAIN @@@@@@@@@@@@@@@@@@
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -95,7 +96,7 @@ public class sinkholes {
                 /*
                 -dp+A    dp(+)
                 dp(+)    **dp
-                 */
+                */
                 dp[i][j] = dp[i - 1][j] + dp[i][j - 1] - dp[i - 1][j - 1] + A[i - 1][j - 1];
             }
         }
