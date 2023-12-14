@@ -43,8 +43,9 @@ public class SpaceShipBomb_DP {
         } 
         else if (ans == 0 && bomb > 0) {
             exploidBomb(row - 1, mat);
-            ans =  dp[row-1][Spos] != -1? dp[row-1][Spos]:findmaxCoin(row - 1, Spos, bomb-1, mat,dp);
+            ans = dp[row - 1][Spos] != -1 ? dp[row - 1][Spos] : findmaxCoin(row - 1, Spos, bomb - 1, mat, dp);
         }
+        dp[row][Spos] = ans;
         return ans;
     }
     public static void main(String[] args) {
@@ -67,7 +68,7 @@ public class SpaceShipBomb_DP {
 
     private static int findmaxCoin_dp(int row, int c, int bomb, char[][] mat) {
         
-        int[][] dp = new int[row][5];
+        int[][] dp = new int[row+1][5];
         for (int[] d : dp) {
             Arrays.fill(d, -1);
         }

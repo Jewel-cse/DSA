@@ -50,9 +50,7 @@ public class chessBoard2 {
                     return distance + 1;
                 }
             }
-
         }
-        
         return -1;
     }
 

@@ -90,7 +90,7 @@ public class spaceShipExpolsion {
             updateMatrix(row - 1, matrix);
             answer = findMaxPoints(row, col, bombs - 1, matrix);
         }
-
+        
         return answer;
     }
 
