@@ -139,20 +139,22 @@ public class sorting_algo {
 
         while (i < j) {
             //calculate i and j pointer
+            //find the first value which is greater than pivot
             while (arr[i] <= pivot && i < high) {
                 i++;
             }
+            //find the last value which is less than pivot
             while (arr[j] > pivot && j > low) {
                 j--;
             }
-            //check i,j cross korse kina,na korle swap
+            //both find and not cross i and j, swap them
             if (i < j) {
                 int temp = arr[j];
                 arr[j] = arr[i];
                 arr[i] = temp;
             }
         }
-        //arr[low] and arr[j] swap , j is pivot position
+        //arr[low] and arr[j] swap , <-j is pivot position
         int temp = arr[low];
         arr[low] = arr[j];
         arr[j] = temp;
