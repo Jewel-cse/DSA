@@ -1,3 +1,5 @@
+
+
 public interface interfaceVsAbsClass {
     /*
      * only abstract method, no implementation
@@ -12,5 +14,7 @@ public interface interfaceVsAbsClass {
      */
     int number = 0;
     String s = "my code";
+
     void doYour();
+    
 }
