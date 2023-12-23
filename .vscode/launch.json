@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "karpRabin",
+            "request": "launch",
+            "mainClass": "DSA.String.karpRabin",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "kmpAlgo",
+            "request": "launch",
+            "mainClass": "DSA.String.kmpAlgo",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
             "name": "Trie",
             "request": "launch",
             "mainClass": "DSA.Trie_DS.Trie",

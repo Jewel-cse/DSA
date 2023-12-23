@@ -68,8 +68,7 @@ public class Trie {
                     break;
                 default:
                     break;
-            }
-            
+            }   
         }
     }
 }
