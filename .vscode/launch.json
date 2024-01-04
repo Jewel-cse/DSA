@@ -6,6 +6,160 @@
     "configurations": [
         {
             "type": "java",
+            "name": "test",
+            "request": "launch",
+            "mainClass": "Basics.test",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "largeNumberOperation",
+            "request": "launch",
+            "mainClass": "NumberThrory.largeNumberOperation",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "largeNumberOperation",
+            "request": "launch",
+            "mainClass": "Array.largeNumberOperation",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "minDeleteTomakePalindrom",
+            "request": "launch",
+            "mainClass": "String.minDeleteTomakePalindrom",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "isomorphic",
+            "request": "launch",
+            "mainClass": "String.isomorphic",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "pangram",
+            "request": "launch",
+            "mainClass": "String.pangram",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "distanceBet2word",
+            "request": "launch",
+            "mainClass": "String.distanceBet2word",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "permutation",
+            "request": "launch",
+            "mainClass": "String.permutation",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "classNobject",
+            "request": "launch",
+            "mainClass": "classNobject",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "BST",
+            "request": "launch",
+            "mainClass": "BST.BST",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "factorial",
+            "request": "launch",
+            "mainClass": "NumberThrory.factorial",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "prime_seive",
+            "request": "launch",
+            "mainClass": "NumberThrory.prime_seive",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "language",
+            "request": "launch",
+            "mainClass": "Contest.language",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "OddONeOUt",
+            "request": "launch",
+            "mainClass": "Contest.OddONeOUt",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "LatinSqure",
+            "request": "launch",
+            "mainClass": "Contest.LatinSqure",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "canbuildSq",
+            "request": "launch",
+            "mainClass": "Contest.canbuildSq",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "number",
+            "request": "launch",
+            "mainClass": "Basics.number",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "StringReverse",
+            "request": "launch",
+            "mainClass": "Basics.StringReverse",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "FenwickTree",
+            "request": "launch",
+            "mainClass": "FenwickTree",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "NumArray",
+            "request": "launch",
+            "mainClass": "NumArray",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "rangeSumQuery",
+            "request": "launch",
+            "mainClass": "rangeSumQuery",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "segmentTree",
+            "request": "launch",
+            "mainClass": "segmentTree",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
             "name": "karpRabin",
             "request": "launch",
             "mainClass": "DSA.String.karpRabin",

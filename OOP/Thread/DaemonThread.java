@@ -6,7 +6,7 @@ public class DaemonThread {
         childDaemon d = new childDaemon();
         //System.out.println(d.isDaemon()); //false, bcz parent thread(main) is non daemon
         d.setDaemon(true);
-        //System.out.println(d.isDaemon()); //false, bcz parent thread(main) is non daemon
+        //System.out.println(d.isDaemon());
         d.start();
         d.stop();
         Thread.sleep(4000); // 4 seconds background e run hobe , after main thread execute complete, child thread terminate

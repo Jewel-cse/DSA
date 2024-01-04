@@ -5,7 +5,7 @@ public class palindrome {
         System.out.println(isPalindromeNum(121342));
     }
 
-    //convert intger to string , thec check..##############
+    //convert intger to string , then check..##############
     public static boolean isPalindrome(int x) {
 
         StringBuilder sb = new StringBuilder();
@@ -23,17 +23,18 @@ public class palindrome {
     }
     //without convert sting.......###########
     public static boolean isPalindromeNum(int x) {
-        int temp = x;        //preserve x
+        int temp = x; //preserve x
         int rev = 0;
-        if (x < 0)    //consider -ve not palindrome
+        if (x < 0) //consider -ve not palindrome
             return false;
-        while (temp != 0) {     
-            rev = rev * 10 + temp % 10;         //calculate reverse number
+        while (temp != 0) {
+            rev = rev * 10 + temp % 10; //calculate reverse number
             temp = temp / 10;
         }
-        if (rev != x)           //check 
+        if (rev != x) //check 
             return false;
         return true;
-        
+
     }
+    
 }

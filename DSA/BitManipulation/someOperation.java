@@ -2,7 +2,7 @@ package BitManipulation;
 
 public class someOperation {
     
-    //$$$$$$$$$$$$$            check ith bit is set or not
+    //$$$$$$$$$$$$$    check ith bit is set or not
     static boolean isKthBitSet(int n, int k) {
         if ((n & (1 << k)) != 0) {
             return true;

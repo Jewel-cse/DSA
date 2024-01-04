@@ -1,4 +1,4 @@
-package BitManipulation;
+package NumberThrory;
 
 import java.util.ArrayList;
 import java.util.List;

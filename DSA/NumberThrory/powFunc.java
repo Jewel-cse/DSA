@@ -1,3 +1,4 @@
+package NumberThrory;
 public class powFunc {
     public static void main(String[] args) {
         System.out.println(myPow(-4, 3));

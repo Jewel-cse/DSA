@@ -13,8 +13,9 @@ public class DeadLock extends Thread {
         b.d2(a);  // execute by child
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         DeadLock d = new DeadLock();
         d.go();
+        Thread.currentThread().join();
     }
 }
