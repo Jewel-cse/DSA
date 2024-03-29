@@ -10,8 +10,5 @@ public class designer extends developer {
         designer d = new designer();
         System.out.println(d.name);
 
-
-    
-
     }
 }

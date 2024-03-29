@@ -6,6 +6,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "anagram",
+            "request": "launch",
+            "mainClass": "anagram",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "StringBasics",
+            "request": "launch",
+            "mainClass": "String.StringBasics",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "palindrome",
+            "request": "launch",
+            "mainClass": "String.palindrome",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "findOnecWhenTriceAll",
+            "request": "launch",
+            "mainClass": "findOnecWhenTriceAll",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "compression",
+            "request": "launch",
+            "mainClass": "DSA.String.compression",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
+            "name": "number",
+            "request": "launch",
+            "mainClass": "NumberThrory.number",
+            "projectName": "SDE_c9342b2e"
+        },
+        {
+            "type": "java",
             "name": "test",
             "request": "launch",
             "mainClass": "Basics.test",

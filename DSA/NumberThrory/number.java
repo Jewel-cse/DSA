@@ -1,6 +1,5 @@
 package NumberThrory;
 
-import java.util.Arrays;
 
 public class number {
     
@@ -26,6 +25,27 @@ public class number {
         }
         //check 
         return temp == num;
+    }
+
+    //@@@@@@@ Happy number @@@@@@@@@@@@
+    public static boolean isHappy(int n) {
+        int slow = n, fast = n;
+        do{
+            slow = getSqSum(slow);
+            fast = getSqSum(getSqSum(fast));
+            System.out.println(slow);
+        }while(slow != fast);
+        
+        return slow == 1;
+    }
+    private static int getSqSum(int n){
+        int sum = 0;
+        while(n>0){
+            int d = n%10;
+            sum +=d*d;
+            n /=10;
+        }
+        return sum;
     }
     
     ////@@@@@@@@ Binary to decimal
@@ -80,7 +100,9 @@ public class number {
         //System.out.println(Armstrong(443));
         //System.out.println(binaryToDecimal(00000));
         //bubble(ans);
-        insertionSort(ans);
-        System.out.println(Arrays.toString(ans));
+        //insertionSort(ans);
+        //System.out.println(Arrays.toString(ans));
+        //System.out.println(isHappy(19));
+        System.out.println(getSqSum(19));
     }
 }
