@@ -6,6 +6,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "SearchPattern_Z_algo",
+      "request": "launch",
+      "mainClass": "String.SearchPattern_Z_algo",
+      "projectName": "SDE_c9342b2e"
+    },
+    {
+      "type": "java",
+      "name": "searchPattern_Z_algo",
+      "request": "launch",
+      "mainClass": "String.searchPattern_Z_algo",
+      "projectName": "SDE_c9342b2e"
+    },
+    {
+      "type": "java",
       "name": "stringMultiply",
       "request": "launch",
       "mainClass": "String.stringMultiply",
