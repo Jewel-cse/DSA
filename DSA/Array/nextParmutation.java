@@ -1,11 +1,10 @@
+import java.util.Arrays;
 
 public class nextParmutation {
     public static void main(String[] args) {
         int[] arr = { 1, 1, 5 };
         next_Permut(arr);
-        for (int i : arr) {
-            System.out.print(i + " ");
-        }
+        System.out.println(Arrays.toString(arr));
     }
     
     //find break point, swap, reverse...........
@@ -14,22 +13,25 @@ public class nextParmutation {
             int i;
             int j;
             int ind = -1;
-    
+            //find break point : a[i] < a[i+1] from backward move
             for (i = N - 2; i >= 0; i--) {
                 if (A[i] < A[i + 1]) {
                     ind = i;
                     break;
                 }
             }
+            // no break point then return reverse of array
             if (ind == -1) {
                 reverse(A, i + 1, N - 1);
             }
+            //find next greater element than break element
             for (j = N - 1; j > ind; j--) {
                 if (A[ind] < A[j]) {
                     swap(A, ind, j);
                     break;
                 }
             }
+            //reverse right half of break point
             reverse(A, i + 1, N - 1);
         }
     
