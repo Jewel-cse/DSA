@@ -1,13 +1,9 @@
 package BinarySearch;
-public class countOccurance {
-    public static void main(String[] args) {
-        int[] arr = { 1, 2,2,2,2,4,4, 4, 4, 5 };
-        System.out.println(count(arr, arr.length, 3));
-        //System.out.println(firstOccr(arr, 4));
-        //System.out.println(lastOccr(arr, 4));
-        System.out.println(totalOccurance(arr, 3));
 
-    }
+import java.util.Arrays;
+
+public class countOccurance {
+  
     //            ***********Approach one***************
     // BS e jekono ekta x pailei tar age and pore loop calabo jotokhon x pawa jai and count korbo
     public static int count(int arr[], int n, int x) { //length,target
@@ -38,53 +34,62 @@ public class countOccurance {
         return count;
     }
 
-    // ############## using lower bound and upper bound ####################
-    //lower bound gives the last occurance 
-    //upper bound gives the first occurance
-
-    public static int upperbound(int[] nums, int target) {
+    // ############## find 1st and last occurance using BS ####################
+    
+    public static int firstOccur(int[] nums, int target) {
         int low = 0;
         int high = nums.length - 1;
         int firstOccrance = -1;
         while (low <= high) {
             int mid = (low + high) / 2;
-            if (nums[mid] >= target) {
+            if(nums[mid] == target){
                 firstOccrance = mid;
-                high = mid - 1; //find <--next lessOrequal target
+                high = mid-1;
+            }
+            else if (nums[mid] > target) {
+                high = mid - 1; 
             } else {
                 low = mid + 1;
-
             }
         }
         return firstOccrance;
     }
-    
-    //its provide last posible location which it is
-    public static int lowerbound(int[] nums, int target) {
+    public static int lastOccur(int[] nums, int target) {
         int low = 0;
         int high = nums.length - 1;
-        int lastOccrance = -1;
+        int last = -1;
         while (low <= high) {
             int mid = (low + high) / 2;
-            if (nums[mid] <= target) {       // equal dileo hoto  na thkle -1 return korbe
-                lastOccrance = mid;
-                low = mid + 1; //find next--> lessOrequal target
-            } else {
+            if(nums[mid] == target){
+                last = mid;
+                low = mid+1;
+            }
+            else if (nums[mid] > target) {
                 high = mid - 1;
-
+                
+            } else {
+                low = mid + 1; 
             }
         }
-        return lastOccrance;
-    }
-    //lets calcualte the occurance
-    public static int totalOccurance(int[] nums, int target) {
-        int first = upperbound(nums, target);
-       // System.out.println(first);
-        if (first == -1) {
-            return 1;
-        }
-        int last = lowerbound(nums, target);
-        return last - first + 1;
+        return last;
     }
     
+    ////############ Number of Occurance ###########
+    public static int count(int arr[], int x) { //length,target
+        int first =firstOccur(arr,x) ;
+        if(first == -1)     return 0;
+
+        return lastOccur(arr, x) -first + 1;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = { 1, 2,2,2,2,4,4, 4, 4, 5 };
+        System.out.println(count(arr, arr.length, 3));
+
+        System.out.println(firstOccur(arr, 4));
+        System.out.println(lastOccur(arr, 4));
+        //System.out.println(totalOccurance(arr, 3));
+        //System.out.println(Arrays.toString(firstAndLastIndex(arr, 3)));
+
+    }
 }
